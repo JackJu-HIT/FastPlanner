@@ -20,6 +20,9 @@ make
   <img src="https://github.com/JackJu-HIT/FastPlanner/blob/master/files/sim.png" width = "600" height = "300"/>
 </p> -->
 
+# 更细节的说明
+参考我的微信公众号：机器人规划与控制研究所 发表的文章：  https://mp.weixin.qq.com/s/zKCKuy7wQmm6y9HY9IhHPw
+
 # 参考项目
  https://github.com/HKUST-Aerial-Robotics/Teach-Repeat-Replan.git
 
