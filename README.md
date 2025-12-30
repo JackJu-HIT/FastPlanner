@@ -70,8 +70,3 @@ make
 
 ---
 *Maintained by JackJu-HIT*
-2.  **图片链接**：将 `blob/master` 修改为 `raw/master`，这是在 GitHub README 中显示图片的标准做法。
-3.  **文章链接**：您原文中 `[显示文本](跳转链接)` 里的两个链接不一致。
-    *   显示的是：`...AVFHA`
-    *   跳转的是：`...hpANg`
-    *   通常 Markdown 会跳转到括号里的链接。我在润色版中使用了括号里的链接（`...hpANg`），请确认这是您想要跳转的正确地址。
