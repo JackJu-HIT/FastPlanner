@@ -1,4 +1,3 @@
-
 # Fast-Planner (早期版本 / Legacy Version)
 
 > [!IMPORTANT]
@@ -9,38 +8,31 @@
 >
 > 👉 **[Fast-Planner-2D-ROS2 (最新 2D 原生版)](https://github.com/JackJu-HIT/Fast-Planner-2D-ROS2)**
 
----
-
 ### 🌟 新版特性与优势 (Key Features of the New Version)
 
 如果您正在开发地面移动机器人，强烈建议使用新版本，它包含以下重大改进：
 
 1.  **专为 2D 地面机器人适配**
-    *   在 B 样条代价函数与 ESDF 梯度计算中，强制加入了 Z 轴方向的优化约束。这使得算法在保留原始框架强大避障平滑性能的同时，完美适配 2D 平面运动规划。
-
+    *   在 B 样条代价函数与 ESDF 梯度计算中，强制加入了 Z 轴方向的优化约束，完美适配 2D 平面运动规划。
 2.  **纯粹的 C++ 核心接口**
-    *   完全剥离了原版复杂的 ROS 1 全局规划与地图管理逻辑，提供解耦的、纯粹的 C++ 优化接口，方便开发者轻松移植并适配到自己的项目中。
-
+    *   完全剥离了原版复杂的 ROS 1 依赖，提供解耦的、纯粹的 C++ 优化接口，方便移植。
 3.  **ESDF 性能深度优化**
-    *   对 ESDF (欧几里得符号距离场) 代码进行了底层升级，大幅优化了构建效率和索引逻辑，计算速度更快，更适合高频的实时局部规划。
-
+    *   底层代码升级，大幅优化了构建效率和索引逻辑，更适合高频实时规划。
 4.  **原生 ROS 2 支持**
-    *   全面拥抱 ROS 2 生态 (支持 Humble/Foxy 等版本)，提供完善的可视化接口与交互媒介，利用 Rviz2 进行仿真与调试更加便捷。
+    *   全面拥抱 ROS 2 (Humble/Foxy)，提供完善的 Rviz2 可视化接口与交互媒介。
 
 ---
 
-# FastPlanner: 2D Trajectory Optimization (Pure C++)
+## 📖 本项目简介 (Legacy Project Introduction)
+
+**FastPlanner: 2D Trajectory Optimization (Pure C++)**
 
 [![C++](https://img.shields.io/badge/Language-C++-blue.svg)](https://isocpp.org/)
 [![Build](https://img.shields.io/badge/Build-CMake-brightgreen.svg)](https://cmake.org/)
 
-## 📖 项目简介
-
 本项目将 **FastPlanner** 后端基于 B 样条（B-Spline）的轨迹优化核心算法进行了剥离与封装，移除了复杂的 ROS 依赖，提供了一个**纯净可用的 C++ 版本**。
 
 针对**地面移动机器人**应用场景，我们将原有的三维轨迹规划算法**降维适配为二维平面**，适用于实时的局部路径规划任务。
-
----
 
 ## ⚙️ 依赖安装
 
@@ -55,8 +47,6 @@ cmake ..
 make
 sudo make install
 ```
-
----
 
 ## 🚀 编译与运行 (How to use)
 
@@ -73,24 +63,18 @@ make
 ./main
 ```
 
----
-
 ## 🖼️ 运行效果 (Result)
 
 <p align="center">
-  <!-- 使用 raw 链接或相对路径以确保图片正常显示 -->
+  <!-- 使用 raw 链接以确保图片在 GitHub 上正常显示 -->
   <img src="https://github.com/JackJu-HIT/FastPlanner/raw/master/files/sim.png" alt="Simulation Result" width="600" />
 </p>
-
----
 
 ## 🔗 参考项目
 
 本项目核心算法源自以下优秀的开源项目：
 
 *   **Teach-Repeat-Replan**: [HKUST-Aerial-Robotics/Teach-Repeat-Replan](https://github.com/HKUST-Aerial-Robotics/Teach-Repeat-Replan.git)
-
----
 
 ## 📚 教程与原理
 
@@ -101,3 +85,8 @@ make
 
 ---
 *Maintained by JackJu-HIT*
+    *   确认使用了 `raw/master` 路径，这是 GitHub 图片显示的正确姿势。
+4.  **排版微调**：
+    *   在徽章（Badges）和正文描述之间增加了空行，避免拥挤。
+
+这份文档现在可以直接发布了，既能起到引流新项目的作用，又能作为旧代码的归档说明。
